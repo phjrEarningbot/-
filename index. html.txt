@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>টাকা আয় করুন - আধুনিক সংস্করণ</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #1a1a2e, #16213e);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --accent-color: #00d2ff;
+            --secondary-accent: #9d50bb;
+            --text-white: #ffffff;
+            --text-gray: #b3b3b3;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-white);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* কার্ড স্টাইল */
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-text {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .btn-modern {
+            background: linear-gradient(45deg, var(--accent-color), var(--secondary-accent));
+            border: none;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-modern:hover {
+            transform: scale(1.02);
+            filter: brightness(1.2);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stat-item {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* অন্যান্য সিএসএস এখানে যোগ করুন... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header-text">Earn Money Today</h1>
+        
+        <div class="card">
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <i class="fas fa-eye"></i>
+                    <p>দেখা বিজ্ঞাপন</p>
+                    <h3 id="watched-ads">0</h3>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-wallet"></i>
+                    <p>মোট আয়</p>
+                    <h3 id="earned-money">0.00</h3>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-modern" onclick="watchAd()">
+            <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন এখন
+        </button>
+    </div>
+</body>
+</html>
